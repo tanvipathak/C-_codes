@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+class add{
+	int x,y;
+	
+	public:
+		
+		add(int a,int b,int c, int d){
+			
+			x=a+c;
+			y=b+d;
+				}
+				
+		void display(){
+			
+			cout<<"\n the added complex number is \n"<<x<<" + "<<y<<"i";
+		}
+};
+
+main(){
+	
+	int a,b,c,d;
+	
+	cout<<"\n enter real parts of the two numbers: \n";
+	cin>>a>>c;
+		
+	cout<<"\n enter imaginary parts of the two numbers: \n";
+	cin>>b>>d;
+	
+	add obj(a,b,c,d);
+	obj.display();
+	
+	return 0;
+	
+	
+}
