@@ -1,0 +1,49 @@
+//multiple inheritance 
+//one class can inherit from many
+#include<iostream>
+using namespace std;
+
+class person{
+	public:
+		person(){
+			cout<<"Is a person \n";
+		}
+};
+
+class teacher{
+	public:
+		teacher(){
+			cout<<"Is a teacher \n";
+		}
+};
+
+class boy{
+	public:
+		boy(){
+			cout<<"Is a boy \n";
+		}
+};
+
+class girl{
+	public:
+		girl(){
+			cout<<"Is a girl \n";
+		}
+};
+
+class she:public person,public girl,public teacher{
+};//in the order of inheritance
+
+class he:public person,public boy,public teacher{
+};
+
+int main(){
+	
+	cout<<"Emily\n";
+	she a;
+	cout<<"Jacob\n";
+	he b;
+	return 0;
+	
+	
+}
