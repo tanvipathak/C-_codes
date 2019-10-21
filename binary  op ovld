@@ -1,0 +1,56 @@
+//binary operator overloading (two operands)
+//adding and subtracting complex numbers
+#include<iostream>
+using namespace std;
+
+class complex{
+	
+	int a,b;
+	public:
+		
+		complex(){
+		}
+	
+		void val(){
+			cout<<"For a + ib enter a and b \n ";
+			cin>>a>>b;
+		}
+		
+		complex operator+(complex obj){
+			complex t;
+			t.a=a+obj.a;
+			t.b=b+obj.b;
+			return t;
+		}
+		
+		complex operator-(complex obj){
+			complex t;
+			t.a=a-obj.a;
+			t.b=b-obj.b;
+			return t;
+		}
+		void display(){
+			cout<<a<<"+\t"<<b<<"i\n";
+		}
+		
+		~complex(){
+		}
+};
+int main(){
+	
+	complex o1,o2,r1,r2;
+	o1.val();
+	o2.val();
+	r1=o1+o2;
+	r2=o1-o2;
+	
+	o1.display();
+	o2.display();
+	r1.display();
+	r2.display();
+	
+	
+	return 0;
+	
+	
+}
